@@ -2,12 +2,27 @@
 
 double Triangle::Perimeter() const
 {
-	return _fSide + _sSide + TSide();
+	return _fSide + _sSide + GetSide(3);
 }
 
 double Triangle::Area() const
 {
-	return _fSide * _sSide / 2 * sin(GetRadian(_angle));
+	return _fSide * _sSide * sin(M_PI * _angle / 180) / 2 ;
+}
+
+double Triangle::GetSide(const int num) const
+{
+	switch (num)
+	{
+	case 1:
+		return _fSide;
+	case 2:
+		return _sSide;
+	case 3:
+		return sqrt(_fSide * _fSide + _sSide * _sSide - 2 * _fSide * _sSide * cos(M_PI * _angle / 180));
+	default:
+		throw std::exception("Incorrect side number");
+	}
 }
 
 Triangle::Triangle(const double fSide, const double sSide, const double angle)
@@ -23,14 +38,4 @@ Triangle::Triangle(const double fSide, const double sSide, const double angle)
 	_fSide = fSide;
 	_sSide = sSide;
 	_angle = angle;
-}
-
-inline double Triangle::GetRadian(const double degree) const
-{
-	return M_PI * degree / 180;
-}
-
-inline double Triangle::TSide() const
-{
-	return sqrt(_fSide * _fSide + _sSide * _sSide - 2 * _fSide * _sSide * cos(GetRadian(_angle)));
 }

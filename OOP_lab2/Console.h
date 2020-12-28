@@ -21,7 +21,7 @@ public:
 		delete[] _results;
 	}
 private:
-	Triangle** _results = nullptr; //массив треугольников
+	ITriangle** _results = nullptr; //массив треугольников
 	int _menuItemNumber = -1; //номер пункта меню
 	int _numberTr = 0; //размер массива
 	int _numberTrNow = 0; //количество запис. в мас. треугольников
@@ -45,7 +45,7 @@ private:
 	void Input(char& v);
 	void CreateTriangle(); //создание треугольника
 	bool PrintArrayTr(); //вывод массива
-	void PrintTr(const Triangle& tr); //вывод треугольника
+	void PrintTr(const ITriangle& tr); //вывод треугольника
 	void CalculateValue(int mode); //вычисление периметра и площади
 	//0 - периметр
 	//1 - площадь

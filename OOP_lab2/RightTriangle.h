@@ -1,14 +1,20 @@
 #pragma once
-#include "Triangle.h"
+#include <algorithm>
+#include <cmath>
+#include "ITriangle.h"
 
-class RightTriangle : public Triangle //прямоугольный треугольник
+class RightTriangle : public ITriangle //прямоугольный треугольник
 {
 public:
-	double Area() const override;
+	virtual double Perimeter() const override; //периметр
+	virtual double Area() const override; //площадь
+	double GetAngle() const override { return 90; } //угол
+	double GetSide(const int num) const override; //стороны треугольника
 
-	RightTriangle() { _angle = 90; }
-	RightTriangle(const double fSide, const double sSide, const double angle);
+	RightTriangle() : _fSide(0), _sSide(0) {}
+	RightTriangle(const double fSide, const double sSide);
 
 private:
-	inline double TSide() const override;
+	double _fSide; //первый катет
+	double _sSide; //второй катет
 };

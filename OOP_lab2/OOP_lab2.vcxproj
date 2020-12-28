@@ -157,11 +157,13 @@
     <ClInclude Include="EquilateralTriangle.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="IsoscelesTriangle.h" />
+    <ClInclude Include="ITriangle.h" />
     <ClInclude Include="RightTriangle.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Console">
+    <Position X="15.5" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EJCAAQAAAAAABIAAAAAQAAAAEAAABEQAAAIAACEAAAI=</HashCode>
+      <FileName>Console.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EquilateralTriangle">
+    <Position X="10" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAAAQAAAACAAAAAAAAAAAAAAAAACAAAAQAAAAA=</HashCode>
+      <FileName>EquilateralTriangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Factory">
+    <Position X="6.75" Y="7.75" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Factory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IsoscelesTriangle">
+    <Position X="0.5" Y="3.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAACAAAQAAAACAAAAAAAAAgAAAAAAACAAAAQAAAAA=</HashCode>
+      <FileName>IsoscelesTriangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITriangle">
+    <Position X="8" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>ITriangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RightTriangle">
+    <Position X="13.5" Y="3.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAQAAAECAAAAAAAAAAAAAAAAAACAQAQAAAAA=</HashCode>
+      <FileName>RightTriangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Triangle">
+    <Position X="4.75" Y="3.5" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>QgAAACAAAQAAAECBAAAAAAAAAAAAAAAAACAAAQAAAAA=</HashCode>
+      <FileName>Triangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,12 +1,18 @@
 #pragma once
-#include "Triangle.h"
+#include <algorithm>
+#include <cmath>
+#include "ITriangle.h"
 
-class EquilateralTriangle : public Triangle //равностороний треугольник
+class EquilateralTriangle : public ITriangle //равностороний треугольник
 {
 public:
 	double Perimeter() const override;
 	double Area() const override;
+	double GetAngle() const override { return 60; } //угол
+	double GetSide(const int num) const override; //стороны треугольника
 
-	EquilateralTriangle() { _angle = 60; }
-	EquilateralTriangle(const double fSide, const double sSide, const double angle);
+	EquilateralTriangle() : _side(0) {}
+	EquilateralTriangle(const double Side);
+private:
+	double _side; //сторона
 };

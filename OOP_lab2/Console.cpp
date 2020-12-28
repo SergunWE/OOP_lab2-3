@@ -58,7 +58,7 @@ void Console::SetNumtTr()
 		{
 			try
 			{
-				_results = new Triangle*[_numberTr];
+				_results = new ITriangle*[_numberTr];
 				/*for (int i = 0; i < _numberTr; i++)
 				{
 					_results[i] = nullptr;
@@ -126,31 +126,12 @@ void Console::CreateTriangle()
 	double fir;
 	double sec;
 	double angle;
-	char type;
 	cout << "Enter the first side of the triangle\n";
 	Input(fir);
 	cout << "Enter the second side of the triangle\n";
 	Input(sec);
 	cout << "Enter the angle of the triangle\n";
 	Input(angle);
-	if (_warMes)
-	{
-		cout << "\nWarning!\n";
-		cout << "Use the right triangle type if you entered a right angle\n";
-		cout << "Use isosceles triangle type if you entered equal sides\n";
-		cout << "Use Auto if your input refers to a right triangle or an isosceles triangle\n";
-		cout << "In this mode the program will try to convert the entered data to create the desired triangle\n";
-		cout << "The accuracy of the definition is not guaranteed\n";
-		cout << "This message will not appear again\n\n";
-		_warMes = false;
-	}
-	cout << "Enter the type of triangle\n";
-	cout << "T, t - Triangle\n";
-	cout << "R, r - Right Triangle\n";
-	cout << "E, e - Equilateral Triangle\n";
-	cout << "I, i - Isosceles Triangle\n";
-	cout << "A, a - Automatic type selection with the possibility of conversion\n";
-	Input(type);
 	system("cls");
 	if (_numberTrNow == _numberTr)
 	{
@@ -159,7 +140,7 @@ void Console::CreateTriangle()
 	}
 	try
 	{
-		_results[_numberTrNow] = Factory::CreateTriangle(fir, sec, angle, type);
+		_results[_numberTrNow] = Factory::CreateTriangle(fir, sec, angle);
 		_numberTrNow++;
 		cout << "The triangle was created\n\n";
 	}
@@ -198,12 +179,12 @@ bool Console::PrintArrayTr()
 	return true;
 }
 
-void Console::PrintTr(const Triangle& tr)
+void Console::PrintTr(const ITriangle& tr)
 {
 	cout.width(15);
-	cout << left << tr.GetFirstSide();
+	cout << left << tr.GetSide(1);
 	cout.width(15);
-	cout << left << tr.GetSecondSide();
+	cout << left << tr.GetSide(2);
 	cout.width(6);
 	cout << left << tr.GetAngle();
 }

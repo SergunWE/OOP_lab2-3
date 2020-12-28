@@ -2,18 +2,32 @@
 
 double EquilateralTriangle::Perimeter() const
 {
-	return _fSide * 3;
+	return _side * 3;
 }
 
 double EquilateralTriangle::Area() const
 {
-	return _fSide * _fSide * sqrt(3) / 4;
+	return _side * _side * sqrt(3) / 4;
 }
 
-EquilateralTriangle::EquilateralTriangle(const double fSide, const double sSide, const double angle = 60) : Triangle(fSide, sSide, angle)
+double EquilateralTriangle::GetSide(const int num) const
 {
-	if ((fSide != sSide) || angle != 60)
+	switch (num)
+	{
+	case 1:
+	case 2:
+	case 3:
+		return _side;
+	default:
+		throw std::exception("Incorrect side number");
+	}
+}
+
+EquilateralTriangle::EquilateralTriangle(const double side)
+{
+	if (side <= 0)
 	{
 		throw std::exception("The triangle isn't equilateral");
 	}
+	_side = side;
 }

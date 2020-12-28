@@ -1,19 +1,36 @@
 #include "RightTriangle.h"
 
+double RightTriangle::Perimeter() const
+{
+	return _fSide + _sSide + GetSide(3);
+}
+
 double RightTriangle::Area() const
 {
 	return _fSide * _sSide / 2;
 }
 
-RightTriangle::RightTriangle(const double fSide, const double sSide, const double angle = 90) : Triangle(fSide, sSide, angle)
+double RightTriangle::GetSide(const int num) const
 {
-	if (angle != 90)
+	switch (num)
 	{
-		throw std::exception("The triangle isn't rectangular");
+	case 1:
+		return _fSide;
+	case 2:
+		return _sSide;
+	case 3:
+		return sqrt(pow(std::max(_fSide, _sSide), 2) - pow(std::min(_fSide, _sSide), 2));
+	default:
+		throw std::exception("Incorrect side number");
 	}
 }
 
-inline double RightTriangle::TSide() const
+RightTriangle::RightTriangle(const double fSide, const double sSide)
 {
-	return sqrt(pow(std::max(_fSide, _sSide), 2) - pow(std::min(_fSide, _sSide), 2));
+	if (fSide <= 0 || sSide <= 0)
+	{
+		throw std::exception("Impermissible side length");
+	}
+	_fSide = fSide;
+	_sSide = sSide;
 }
