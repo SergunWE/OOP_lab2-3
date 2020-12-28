@@ -13,7 +13,6 @@ public:
 
 	Triangle() : _fSide(0), _sSide(0), _angle(0) {}
 	Triangle(const double fSide, const double sSide, const double angle);
-	~Triangle() = default;
 
 private:
 	double _fSide; //первая сторона

@@ -146,7 +146,6 @@
   <ItemGroup>
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="EquilateralTriangle.cpp" />
-    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="IsoscelesTriangle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RightTriangle.cpp" />

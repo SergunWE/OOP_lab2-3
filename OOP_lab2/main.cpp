@@ -1,7 +1,5 @@
-#include <iostream>
 #include <vld.h>
 #include "Console.h"
-#include "Factory.h"
 
 int main()
 {

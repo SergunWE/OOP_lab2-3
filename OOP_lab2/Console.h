@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
-#include <iomanip>
 #include "Factory.h"
 
 using namespace std;
@@ -42,13 +41,11 @@ private:
 	void SetNumtTr(); //установка размера массива
 	void Input(double& v); //ввод
 	void Input(int& v);
-	void Input(char& v);
 	void CreateTriangle(); //создание треугольника
 	bool PrintArrayTr(); //вывод массива
 	void PrintTr(const ITriangle& tr); //вывод треугольника
-	void CalculateValue(int mode); //вычисление периметра и площади
+	void CalculateValue(const int mode); //вычисление периметра и площади
 	//0 - периметр
 	//1 - площадь
-	void CompareTriangle(int mode); //сравнение треугольников по пер. и пло.
+	void CompareTriangle(const int mode); //сравнение треугольников по пер. и пло.
 };
-

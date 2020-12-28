@@ -110,17 +110,6 @@ void Console::Input(int& v)
 	}
 }
 
-void Console::Input(char& v)
-{
-	cout << "> ";
-	cin >> v;
-	if (cin.fail())
-	{
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-	}
-}
-
 void Console::CreateTriangle()
 {
 	double fir;
@@ -189,7 +178,7 @@ void Console::PrintTr(const ITriangle& tr)
 	cout << left << tr.GetAngle();
 }
 
-void Console::CalculateValue(int mode)
+void Console::CalculateValue(const int mode)
 {
 	if (!PrintArrayTr()) return;
 	cout << "Enter the triangle number\n";
@@ -219,7 +208,7 @@ void Console::CalculateValue(int mode)
 	}
 }
 
-void Console::CompareTriangle(int mode)
+void Console::CompareTriangle(const int mode)
 {
 	if (!PrintArrayTr()) return;
 	int num = 0;
