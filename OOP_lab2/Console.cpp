@@ -50,7 +50,7 @@ void Console::SetNumtTr()
 	}
 	delete[] _results;
 	_numberTr = 0;
-	cout << "Enter the array's size to save fractions\n";
+	cout << "Enter the array's size to save triangles\n";
 	while (_numberTr == 0)
 	{
 		Input(_numberTr);
